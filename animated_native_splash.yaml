@@ -1,0 +1,6 @@
+animated_native_splash:
+
+  # This package generates native code to customize Flutter's splash
+
+  # jsonFile is the only required parameter.This the file use to setup the animation object.
+  jsonFile: assets/lottie/no_bill.json

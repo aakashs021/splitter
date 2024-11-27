@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "169378108224",
+    "project_id": "splitter-22986",
+    "storage_bucket": "splitter-22986.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169378108224:android:b2dcf25b501abd607060a5",
+        "android_client_info": {
+          "package_name": "com.example.splitter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169378108224-vrkfup51rtsrpclthguustbv95j1f4gk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.splitter",
+            "certificate_hash": "a120152ce1460ac2841b3dab7b29c9fab9f4369e"
+          }
+        },
+        {
+          "client_id": "169378108224-uld7d3s39cj8dlso990b48p77s8db0l6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARChVwxkCzHnIOyb8p5bWTmXBaYn5WPEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169378108224-uld7d3s39cj8dlso990b48p77s8db0l6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "169378108224-dcvfsd7kst883usdf16iseo6i21hs6q0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.splitter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
