@@ -28,8 +28,8 @@ class AddFriendsPage extends StatelessWidget {
                   Container(
                     height: 50,
                     width: 50,
-                    // color: Colors.red,
-                    child: const CircleAvatar(
+                    child: CircleAvatar(
+                      backgroundColor: Colors.blue.shade100,
                       child: Text('A'),
                     ),
                   ),
@@ -39,17 +39,21 @@ class AddFriendsPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                       height: 70,
-                      // width: 200,
-                      // color: Colors.blue,
                       child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Aakash Suresh lkadsjejlkdroejflkmcmcxlkklfdjlkflkj',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w500),
+                            'Aakash Suresh ',
                             overflow: TextOverflow.ellipsis,
                           ),
-                          Text('aakashs2022sa@gmail.com'),
+                          Text(
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.w400),
+                              overflow: TextOverflow.ellipsis,
+                              'aakashs2022sa@gmail.com'),
                         ],
                       ),
                     ),
@@ -59,21 +63,27 @@ class AddFriendsPage extends StatelessWidget {
                   ),
                   Container(
                     height: 50,
-                    width: 70,
+                    width: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(12.5),
+                        border: Border.all(color: Colors.blue)),
                     // color: Colors.black,
-                    child: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                       
-                      ],
+                    child: Center(
+                      child: Icon(
+                        Icons.person_add_alt_1,
+                        color: Colors.white,
+                        size: 27.5,
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
+            Divider(),
             SizedBox(
-              height: 10,
-            ),
+                // height: 10,
+                ),
             Container(
               height: 50,
               child: Row(
@@ -99,7 +109,9 @@ class AddFriendsPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Aakash Suresh lkadsjejlkdroejflkmcmcxlkklfdjlkflkj',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w500),
+                            'New Member',
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text('aakashs2022sa@gmail.com'),
@@ -112,13 +124,18 @@ class AddFriendsPage extends StatelessWidget {
                   ),
                   Container(
                     height: 50,
-                    width: 70,
+                    width: 50,
+                    decoration: BoxDecoration(
+                        // color: Colors.blue,
+                        borderRadius: BorderRadius.circular(12.5),
+                        border: Border.all(color: Colors.green)),
                     // color: Colors.black,
-                    child: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                       
-                      ],
+                    child: Center(
+                      child: Icon(
+                        Icons.people,
+                        color: Colors.green,
+                        size: 27.5,
+                      ),
                     ),
                   ),
                 ],

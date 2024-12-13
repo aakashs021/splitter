@@ -1,10 +1,6 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:splitter/features/auth/domain/usecase/sign_out_usecase.dart';
 import 'package:splitter/router/app_router_constants.dart';
-import 'package:splitter/service_locator.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +11,8 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          GoRouter.of(context).pushNamed(AppRouterConstants.addFriendsPageRouterName);
+          GoRouter.of(context)
+              .pushNamed(AppRouterConstants.addFriendsPageRouterName);
         },
         child: const Icon(Icons.person_add_alt),
       ),
@@ -43,57 +40,75 @@ class HomePage extends StatelessWidget {
               shrinkWrap: true,
               itemCount: 3,
               itemBuilder: (context, index) {
-                return Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 50,
-                        width: 50,
-                        // color: Colors.red,
-                        child: const CircleAvatar(
-                          child: Text('A'),
+                return InkWell(
+                  onTap: () {
+                    GoRouter.of(context)
+                        .pushNamed(AppRouterConstants.detailPageRouterName);
+                  },
+                  child: Container(
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 50,
+                          // color: Colors.red,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.blue.shade100,
+                            child: Text('A'),
+                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                        child: Container(
-                          height: 70,
-                          // width: 200,
-                          // color: Colors.blue,
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Container(
+                            height: 70,
+                            // width: 200,
+                            // color: Colors.blue,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  style: TextStyle(
+                                      fontSize: 17.5,
+                                      fontWeight: FontWeight.w500),
+                                  'Aakash Suresh ',
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                Text(
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400),
+                                    'aakashs2022sa@gmail.com'),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 70,
+                          // color: Colors.black,
                           child: const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'Aakash Suresh lkadsjejlkdroejflkmcmcxlkklfdjlkflkj',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                  ),
+                                  'owes'),
+                              Text(
+                                "#100000",
                                 overflow: TextOverflow.ellipsis,
-                              ),
-                              Text('aakashs2022sa@gmail.com'),
+                              )
                             ],
                           ),
                         ),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                        height: 50,
-                        width: 70,
-                        // color: Colors.black,
-                        child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Owes'),
-                            Text(
-                              "#100000",
-                              overflow: TextOverflow.ellipsis,
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 );
                 // return ListTile(
