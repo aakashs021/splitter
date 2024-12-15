@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:sign_in_button/sign_in_button.dart';
 import 'package:splitter/core/configs/assets/app_images.dart';
 import 'package:splitter/features/auth/presentation/bloc/auth_state.dart';
-import 'package:splitter/features/auth/presentation/cubit/g_cubit.dart';
+import 'package:splitter/features/auth/presentation/cubit/google_signin_cubit.dart';
 import 'package:splitter/features/auth/presentation/widgets/auth_snackbar.dart';
 import 'package:splitter/features/auth/presentation/widgets/loading_indicator.dart';
 import 'package:splitter/router/app_router_constants.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:splitter/features/individual_split/presentation/widgets/expense_add_page_widgets.dart/company_logo_text_feild.dart';
+import 'package:splitter/features/individual_split/expense_add/presentation/widgets/company_logo_text_feild.dart';
 
 class ExpenseAddPage extends StatelessWidget {
   const ExpenseAddPage({super.key});

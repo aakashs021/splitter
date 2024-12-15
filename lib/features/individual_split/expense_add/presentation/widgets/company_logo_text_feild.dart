@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:splitter/features/individual_split/presentation/cubit/company_logo_cubit.dart';
+import 'package:splitter/features/individual_split/home/presentation/cubit/company_logo_cubit.dart';
 
 class CompanyLogoTextFeild extends StatelessWidget {
   const CompanyLogoTextFeild({super.key});
