@@ -9,6 +9,11 @@ import 'package:splitter/features/auth/domain/usecase/google_sign_in_usecase.dar
 import 'package:splitter/features/auth/domain/usecase/sign_in_usecase.dart';
 import 'package:splitter/features/auth/domain/usecase/sign_out_usecase.dart';
 import 'package:splitter/features/auth/domain/usecase/sign_up_usecase.dart';
+import 'package:splitter/features/individual_split/add_friends/data/data%20source/friends_data_source.dart';
+import 'package:splitter/features/individual_split/add_friends/data/repository/friends_repository_impl.dart';
+import 'package:splitter/features/individual_split/add_friends/domain/repository/friends_repository.dart';
+import 'package:splitter/features/individual_split/add_friends/domain/usecase/request_friend_usecase.dart';
+import 'package:splitter/features/individual_split/add_friends/domain/usecase/search_friend_usecase.dart';
 import 'package:splitter/firebase_options.dart';
 
 class ServiceLocator {
@@ -25,5 +30,9 @@ class ServiceLocator {
     sl.registerLazySingleton<SignOutUsecase>(() => SignOutUsecase(),);
     sl.registerLazySingleton<SignUpUsecase>(() => SignUpUsecase(),);
     sl.registerLazySingleton<GoogleSignInUsecase>(() => GoogleSignInUsecase(),);
+    sl.registerLazySingleton<FriendsDataSource>(() => FriendsDataSourceImpl(),);
+    sl.registerLazySingleton<FriendsRepository>(() => FriendsRepositoryImpl(),);
+    sl.registerLazySingleton<RequestFriendUsecase>(() => RequestFriendUsecase(),);
+    sl.registerLazySingleton<SearchFriendUsecase>(() => SearchFriendUsecase(),);
   }
 }

@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:splitter/core/usecase/usecase_other.dart';
+import 'package:splitter/core/usecase/auth_usecases/usecase_other.dart';
 import 'package:splitter/features/auth/domain/repostiory/auth_repository.dart';
 import 'package:splitter/service_locator.dart';
 

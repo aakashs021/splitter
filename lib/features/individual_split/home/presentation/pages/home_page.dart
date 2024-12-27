@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:splitter/features/auth/domain/usecase/sign_out_usecase.dart';
 import 'package:splitter/router/app_router_constants.dart';
+import 'package:splitter/service_locator.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,7 +18,18 @@ class HomePage extends StatelessWidget {
         },
         child: const Icon(Icons.person_add_alt),
       ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          Icon(
+            Icons.notifications_outlined,
+            size: 30,
+            color: Colors.blue,
+          ),
+          SizedBox(
+            width: 20,
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: ListView(
@@ -126,7 +139,14 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(
               height: 50,
-            )
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  ServiceLocator.sl<SignOutUsecase>().call();
+                  GoRouter.of(context)
+                      .goNamed(AppRouterConstants.signInPageRouterName);
+                },
+                child: Text('data'))
           ],
         ),
       ),

@@ -1,9 +1,10 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 class AddFriendEntity {
   String name;
   String email;
+  bool? isFriend;
   AddFriendEntity({
     required this.name,
     required this.email,
+    this.isFriend
   });
 }

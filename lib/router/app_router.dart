@@ -37,7 +37,7 @@ class AppRouter {
           routes: [
             GoRoute(path: '/addFriends',
             name: AppRouterConstants.addFriendsPageRouterName,
-            builder: (context, state) => const AddFriendsPage(),
+            builder: (context, state) =>  AddFriendsPage(),
             ),
             GoRoute(path: '/detail',
               name: AppRouterConstants.detailPageRouterName,
